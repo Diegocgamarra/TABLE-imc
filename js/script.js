@@ -21,11 +21,13 @@ for (i = 0; i < pacientes.length; i++) {
     console.log("Peso inválido")
     checkPeso = false
     tdImc.textContent = "Peso inválido!"
+    paciente.classList.add("paciente-invalido")
   }
   if (altura < 0 || altura >= 3) {
     console.log("Altura Inválida")
     checkAltura = false
     tdImc.textContent = "Altura Inválida"
+    paciente.classList.add("paciente-invalido")
   }
   if (checkAltura && checkPeso) {
     tdImc.textContent = imc.toFixed(2)
